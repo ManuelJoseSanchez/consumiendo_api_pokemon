@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
-app.listen(3000, () => {
-   console.log('http://localhost:3000'); 
-});
+app.use("/api/",require('./src/router/index.routers'))
+
+if (!module.parent) { 
+   app.listen(3000);
+}
+module.exports = app;
