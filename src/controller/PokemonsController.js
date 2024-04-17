@@ -6,6 +6,7 @@ const { getListServices } = require("./../services/Pockemon.service");
 
 
 const getList = async (req, res = response) => {
+    console.log("Holas");
     const data = await getListServices(axios);
     res.status(200).json({ data });
 }
